@@ -9,7 +9,6 @@ import PostHeader from "../../components/post-header";
 import SectionSeparator from "../../components/section-separator";
 import { request } from "../../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../../lib/fragments";
-import Script from 'next/script'
 
 export async function getStaticPaths() {
   const data = await request({ query: `{ allPosts { slug } }` });
@@ -30,6 +29,7 @@ export async function getStaticProps({ params, preview = false }) {
           }
         }
         post(filter: {slug: {eq: $slug}}) {
+          id
           seo: _seoMetaTags {
             ...metaTagsFragment
           }
@@ -116,12 +116,13 @@ export default function Post({ subscription, preview }) {
   } = useQuerySubscription(subscription);
 
   const metaTags = post.seo.concat(site.favicon);
+  console.log(post);
 
   return (
     <Layout preview={preview}>
       <Head>
         {renderMetaTags(metaTags)}
-        <meta name="vf:domain" content="vfpolitics.wpengine.com" />
+        <meta name="vf:container_id" content={post.id} />
       </Head>
       <Container>
         <Header />
@@ -135,10 +136,9 @@ export default function Post({ subscription, preview }) {
           <PostBody content={post.content} />
         </article>
         <div className="viafoura">
-          <vf-conversations vf-container-id="74"></vf-conversations>
+          <vf-conversations></vf-conversations>
           <vf-tray-trigger floating="true"></vf-tray-trigger>
         </div>
-        <Script src="//cdn.viafoura.net/vf-v2.js" strategy="lazyOnload" />
         <SectionSeparator />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
