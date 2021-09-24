@@ -6,9 +6,8 @@ export default function Avatar({ name, picture, postId }) {
         className="w-12 h-12 rounded-full mr-4"
         alt={name}
       />
-      <div className="text-xl font-bold">{name}</div>
-      <div class="viafoura">
-        &nbsp; | <vf-conversations-count vf-container-id={postId}></vf-conversations-count> comments
+      <div className="text-xl font-bold">
+        {name} &nbsp; | <vf-conversations-count vf-container-id={postId}></vf-conversations-count> comments
       </div>
     </div>
   )
