@@ -6,13 +6,12 @@ import MoreStories from "../../components/more-stories";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
 import SectionSeparator from "../../components/section-separator";
-import gql from 'graphql-tag';
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import { request } from "../../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../../lib/fragments";
 
 export async function getStaticPaths() {
-  const data = await request({ query: gql`{ allPosts { slug } }` });
+  const data = await request({ query: `{ allPosts { slug } }` });
 
   return {
     paths: data.allPosts.map((post) => `/posts/${post.slug}`),
@@ -22,7 +21,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params, preview = false }) {
   const graphqlRequest = {
-    query: gql`
+    query: `
       query PostBySlug($slug: String) {
         site: _site {
           favicon: faviconMetaTags {
