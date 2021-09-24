@@ -1,4 +1,4 @@
-export default function Avatar({ name, picture }) {
+export default function Avatar({ name, picture, postId }) {
   return (
     <div className="flex items-center">
       <img
@@ -8,7 +8,7 @@ export default function Avatar({ name, picture }) {
       />
       <div className="text-xl font-bold">{name}</div>
       <div class="viafoura">
-        <vf-conversations-count vf-container-id={id}></vf-conversations-count>
+        <vf-conversations-count vf-container-id={postId}></vf-conversations-count>
       </div>
     </div>
   )
