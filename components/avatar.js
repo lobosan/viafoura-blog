@@ -7,6 +7,9 @@ export default function Avatar({ name, picture }) {
         alt={name}
       />
       <div className="text-xl font-bold">{name}</div>
+      <div class="viafoura">
+        <vf-conversations-count vf-container-id={id}></vf-conversations-count>
+      </div>
     </div>
   )
 }
