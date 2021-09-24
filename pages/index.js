@@ -23,6 +23,7 @@ export async function getStaticProps({ preview }) {
           }
         }
         allPosts(orderBy: date_DESC, first: 20) {
+          id
           title
           slug
           excerpt

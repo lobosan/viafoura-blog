@@ -4,6 +4,7 @@ import CoverImage from './cover-image'
 import Link from 'next/link'
 
 export default function PostPreview({
+  id,
   title,
   coverImage,
   date,
@@ -31,7 +32,7 @@ export default function PostPreview({
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />
       <div class="viafoura">
-        <vf-conversations-count></vf-conversations-count>
+        <vf-conversations-count vf-container-id={id}></vf-conversations-count>
       </div>
     </div>
   )
