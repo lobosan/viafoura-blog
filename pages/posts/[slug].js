@@ -9,6 +9,7 @@ import PostHeader from "../../components/post-header";
 import SectionSeparator from "../../components/section-separator";
 import { request } from "../../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../../lib/fragments";
+import Script from 'next/script'
 
 export async function getStaticPaths() {
   const data = await request({ query: `{ allPosts { slug } }` });
