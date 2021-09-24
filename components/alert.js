@@ -24,7 +24,7 @@ export default function Alert({ preview }) {
             </>
           ) : (
             <>
-              This is page is showing published content.{' '}
+              This page is showing published content.{' '}
               <a
                 href="/api/preview"
                 className="underline hover:text-cyan duration-200 transition-colors"

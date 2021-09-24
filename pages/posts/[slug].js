@@ -116,7 +116,6 @@ export default function Post({ subscription, preview }) {
   } = useQuerySubscription(subscription);
 
   const metaTags = post.seo.concat(site.favicon);
-  console.log(post);
 
   return (
     <Layout preview={preview}>
