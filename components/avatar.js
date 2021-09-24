@@ -8,7 +8,7 @@ export default function Avatar({ name, picture, postId }) {
       />
       <div className="text-xl font-bold">{name}</div>
       <div class="viafoura">
-        | <vf-conversations-count vf-container-id={postId}></vf-conversations-count> comments
+        &nsbp; | <vf-conversations-count vf-container-id={postId}></vf-conversations-count> comments
       </div>
     </div>
   )
