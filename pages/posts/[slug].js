@@ -118,7 +118,10 @@ export default function Post({ subscription, preview }) {
 
   return (
     <Layout preview={preview}>
-      <Head>{renderMetaTags(metaTags)}</Head>
+      <Head>
+        {renderMetaTags(metaTags)}
+        <meta name="vf:domain" content="vfpolitics.wpengine.com" />
+      </Head>
       <Container>
         <Header />
         <article>
@@ -130,6 +133,11 @@ export default function Post({ subscription, preview }) {
           />
           <PostBody content={post.content} />
         </article>
+        <div className="viafoura">
+          <vf-conversations vf-container-id="74"></vf-conversations>
+          <vf-tray-trigger floating="true"></vf-tray-trigger>
+        </div>
+        <Script src="https://cdn.viafoura.net/vf-v2.js" strategy="lazyOnload" />
         <SectionSeparator />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
