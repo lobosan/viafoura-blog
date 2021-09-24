@@ -1,16 +1,17 @@
 import Head from "next/head";
-import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import Container from "../components/container";
 import HeroPost from "../components/hero-post";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
 import MoreStories from "../components/more-stories";
+import gql from 'graphql-tag';
+import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import { request } from "../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
 
 export async function getStaticProps({ preview }) {
   const graphqlRequest = {
-    query: `
+    query: gql`
       {
         site: _site {
           favicon: faviconMetaTags {
