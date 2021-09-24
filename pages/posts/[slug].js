@@ -137,7 +137,7 @@ export default function Post({ subscription, preview }) {
           <vf-conversations vf-container-id="74"></vf-conversations>
           <vf-tray-trigger floating="true"></vf-tray-trigger>
         </div>
-        <Script src="https://cdn.viafoura.net/vf-v2.js" strategy="lazyOnload" />
+        <Script src="//cdn.viafoura.net/vf-v2.js" strategy="lazyOnload" />
         <SectionSeparator />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
