@@ -82,6 +82,7 @@ export default function Index({ subscription }) {
           <Intro />
           {heroPost && (
             <HeroPost
+              id={heroPost.id}
               title={heroPost.title}
               coverImage={heroPost.coverImage}
               date={heroPost.date}
