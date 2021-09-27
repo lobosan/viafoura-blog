@@ -135,6 +135,14 @@ export default function Post({ subscription, preview }) {
           <PostBody content={post.content} />
         </article>
         <div className="viafoura">
+          <vf-content-recirculation
+            limit="5"
+            days-published="7"
+            trend-window="1"
+            sort="comments"
+          />
+        </div>
+        <div className="viafoura pt-48">
           <vf-conversations></vf-conversations>
           <vf-tray-trigger floating="true"></vf-tray-trigger>
         </div>
