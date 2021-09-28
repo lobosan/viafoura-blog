@@ -4,7 +4,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <meta name="vf:domain" content="viafoura-blog.vercel.app" />
+        </Head>
         <body>
           <Main />
           <NextScript />

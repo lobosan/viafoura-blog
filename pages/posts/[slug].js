@@ -2,10 +2,8 @@ import Head from "next/head";
 import Container from "../../components/container";
 import Header from "../../components/header";
 import Layout from "../../components/layout";
-import MoreStories from "../../components/more-stories";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
-import SectionSeparator from "../../components/section-separator";
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import { request } from "../../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../../lib/fragments";
@@ -46,6 +44,10 @@ export async function getStaticProps({ params, preview = false }) {
                     ...responsiveImageFragment
                   }
                 }
+              }
+              ...on RawHtmlRecord {
+                id
+                contentRecirculation
               }
             }
           }
@@ -134,20 +136,11 @@ export default function Post({ subscription, preview }) {
           />
           <PostBody content={post.content} />
         </article>
+        <div className="mt-10"></div>
         <div className="viafoura">
-          <vf-content-recirculation
-            limit="5"
-            days-published="7"
-            trend-window="1"
-            sort="comments"
-          />
-        </div>
-        <div className="viafoura pt-48">
           <vf-conversations></vf-conversations>
           <vf-tray-trigger floating="true"></vf-tray-trigger>
         </div>
-        <SectionSeparator />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
     </Layout>
   );
