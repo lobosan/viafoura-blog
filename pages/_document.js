@@ -12,9 +12,9 @@ export default class MyDocument extends Document {
           <NextScript />
           <script
             type="text/javascript"
-            async
+            async="true"
             src="//cdn.viafoura.net/vf-v2.js"
-          />
+          ></script>
         </body>
       </Html>
     );
