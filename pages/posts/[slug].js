@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Container from "../../components/container";
-import Header from "../../components/header";
 import Layout from "../../components/layout";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
@@ -67,24 +66,6 @@ export async function getStaticProps({ params, preview = false }) {
             }
           }
         }
-
-        morePosts: allPosts(orderBy: date_DESC, first: 2, filter: {slug: {neq: $slug}}) {
-          title
-          slug
-          excerpt
-          date
-          coverImage {
-            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
-              ...responsiveImageFragment
-            }
-          }
-          author {
-            name
-            picture {
-              url(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100, sat: -100})
-            }
-          }
-        }
       }
 
       ${responsiveImageFragment}
@@ -114,7 +95,7 @@ export async function getStaticProps({ params, preview = false }) {
 
 export default function Post({ subscription, preview }) {
   const {
-    data: { site, post, morePosts },
+    data: { site, post },
   } = useQuerySubscription(subscription);
 
   const metaTags = post.seo.concat(site.favicon);
@@ -126,7 +107,6 @@ export default function Post({ subscription, preview }) {
         <meta name="vf:container_id" content={post.id} />
       </Head>
       <Container>
-        <Header />
         <article>
           <PostHeader
             title={post.title}
@@ -139,7 +119,6 @@ export default function Post({ subscription, preview }) {
         <div className="mt-10"></div>
         <div className="viafoura">
           <vf-conversations></vf-conversations>
-          <vf-tray-trigger floating="true"></vf-tray-trigger>
         </div>
       </Container>
     </Layout>

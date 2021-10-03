@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Container from "../components/container";
 import HeroPost from "../components/hero-post";
-import Intro from "../components/intro";
 import Layout from "../components/layout";
 import MoreStories from "../components/more-stories";
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
@@ -79,7 +78,6 @@ export default function Index({ subscription }) {
       <Layout preview={subscription.preview}>
         <Head>{renderMetaTags(metaTags)}</Head>
         <Container>
-          <Intro />
           {heroPost && (
             <HeroPost
               id={heroPost.id}

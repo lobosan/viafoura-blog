@@ -1,7 +1,7 @@
-import Avatar from '../components/avatar'
-import Date from '../components/date'
-import CoverImage from '../components/cover-image'
-import Link from 'next/link'
+import Avatar from "../components/avatar";
+import Date from "../components/date";
+import CoverImage from "../components/cover-image";
+import Link from "next/link";
 
 export default function HeroPost({
   id,
@@ -14,7 +14,7 @@ export default function HeroPost({
 }) {
   return (
     <section>
-      <div className="mb-8 md:mb-16">
+      <div className="my-8 md:mb-16">
         <CoverImage
           title={title}
           responsiveImage={coverImage.responsiveImage}
@@ -38,5 +38,5 @@ export default function HeroPost({
         </div>
       </div>
     </section>
-  )
+  );
 }
