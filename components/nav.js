@@ -44,7 +44,7 @@ export default function Nav() {
         <ul className="hidden ml-auto space-x-8 lg:flex">
           <li>
             <div className="viafoura">
-              <vf-tray></vf-tray>
+              <vf-tray-trigger></vf-tray-trigger>
             </div>
           </li>
         </ul>
