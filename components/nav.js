@@ -10,16 +10,6 @@ export default function Nav() {
           <li>
             <a
               href="/"
-              aria-label="Home"
-              title="Home"
-              className="text-lg font-medium tracking-wide transition-colors duration-200 hover:text-red-accent-400"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="/"
               aria-label="News"
               title="News"
               className="text-lg font-medium tracking-wide transition-colors duration-200 hover:text-red-accent-400"
@@ -38,9 +28,11 @@ export default function Nav() {
             </a>
           </li>
         </ul>
-        <span className="text-left text-xl lg:text-center lg:text-3xl font-bold">
-          Viafoura Times
-        </span>
+        <div className="text-left text-xl lg:text-center lg:text-3xl font-bold hover:text-red-accent-400">
+          <a href="/" aria-label="Viafoura Times" title="Viafoura Times">
+            Viafoura Times
+          </a>
+        </div>
         <ul className="hidden ml-auto space-x-8 lg:flex">
           <li>
             <div className="viafoura">
@@ -76,16 +68,13 @@ export default function Nav() {
             <div className="absolute top-0 left-0 w-full">
               <div className="p-5 bg-white border rounded shadow-sm">
                 <div className="flex items-center justify-between mb-4">
-                  <div>
+                  <div className="text-xl font-bold hover:text-red-accent-400">
                     <a
                       href="/"
-                      aria-label="Viafoura"
-                      title="Viafoura"
-                      className="inline-flex"
+                      aria-label="Viafoura Times"
+                      title="Viafoura Times"
                     >
-                      <span className="text-xl font-bold text-gray-800">
-                        Viafoura Times
-                      </span>
+                      Viafoura Times
                     </a>
                   </div>
                   <div>
@@ -109,19 +98,9 @@ export default function Nav() {
                     <li>
                       <a
                         href="/"
-                        aria-label="Home"
-                        title="Home"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-accent-400"
-                      >
-                        Home
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
                         aria-label="News"
                         title="News"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-accent-400"
+                        className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:text-red-accent-400"
                       >
                         News
                       </a>
@@ -131,7 +110,7 @@ export default function Nav() {
                         href="/"
                         aria-label="Sports"
                         title="Sports"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-accent-400"
+                        className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:text-red-accent-400"
                       >
                         Sports
                       </a>

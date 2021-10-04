@@ -5,3 +5,6 @@
 .viafoura {
   background-color: transparent !important;
 }
+.vf-expanding-hover-light::before {
+  border-width: 0 0 3px 0 !important;
+}
