@@ -45,7 +45,7 @@ module.exports = {
           900: "#b71c1c",
           "accent-100": "#ff8a80",
           "accent-200": "#ff5252",
-          "accent-400": "#ff1744",
+          "accent-400": "#a8100b",
           "accent-700": "#d50000",
         },
         purple: {

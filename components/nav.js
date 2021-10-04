@@ -4,52 +4,16 @@ export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 px-4 py-5 max-w-full lg:px-8 bg-gray-100">
-      <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
-        <ul className="items-center hidden space-x-8 lg:flex">
-          <li>
-            <a
-              href="/"
-              aria-label="News"
-              title="News"
-              className="text-lg font-medium tracking-wide transition-colors duration-200 hover:text-red-accent-400"
-            >
-              News
-            </a>
-          </li>
-          <li>
-            <a
-              href="/"
-              aria-label="Sports"
-              title="Sports"
-              className="text-lg font-medium tracking-wide transition-colors duration-200 hover:text-red-accent-400"
-            >
-              Sports
-            </a>
-          </li>
-        </ul>
-        <div className="text-left text-xl lg:text-center lg:text-3xl font-bold hover:text-red-accent-400">
-          <a href="/" aria-label="Viafoura Times" title="Viafoura Times">
-            Viafoura Times
-          </a>
-        </div>
-        <ul className="hidden ml-auto space-x-8 lg:flex">
-          <li>
-            <div className="viafoura">
-              <vf-tray-trigger></vf-tray-trigger>
-            </div>
-          </li>
-        </ul>
-
-        {/* Mobile menu */}
-        <div className="ml-auto lg:hidden">
+    <nav className="sticky top-0 z-40 px-4 py-3 max-w-full lg:px-8 bg-red-accent-400">
+      <div className="relative grid items-center grid-cols-3">
+        <div className="text-left">
           <button
             aria-label="Open Menu"
             title="Open Menu"
-            className="p-2 -mr-1 transition duration-200 rounded"
+            className="p-2 transition duration-200 rounded"
             onClick={() => setIsMenuOpen(true)}
           >
-            <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
+            <svg className="text-white w-5" viewBox="0 0 24 24">
               <path
                 fill="currentColor"
                 d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
@@ -65,16 +29,12 @@ export default function Nav() {
             </svg>
           </button>
           {isMenuOpen && (
-            <div className="absolute top-0 left-0 w-full">
+            <div className="absolute top-0 left-0 w-72">
               <div className="p-5 bg-white border rounded shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-xl font-bold hover:text-red-accent-400">
-                    <a
-                      href="/"
-                      aria-label="Viafoura Times"
-                      title="Viafoura Times"
-                    >
-                      Viafoura Times
+                    <a href="/" aria-label="Viafoura" title="Viafoura">
+                      Viafoura
                     </a>
                   </div>
                   <div>
@@ -97,22 +57,52 @@ export default function Nav() {
                   <ul className="space-y-4">
                     <li>
                       <a
-                        href="/"
-                        aria-label="News"
-                        title="News"
+                        href="/posts/mistakes-tourists-make-on-their-first-trip-abroad"
+                        aria-label="LiveComments"
+                        title="LiveComments"
                         className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:text-red-accent-400"
                       >
-                        News
+                        LiveComments
                       </a>
                     </li>
                     <li>
                       <a
                         href="/"
-                        aria-label="Sports"
-                        title="Sports"
+                        aria-label="LiveStories"
+                        title="LiveStories"
                         className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:text-red-accent-400"
                       >
-                        Sports
+                        LiveStories
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/"
+                        aria-label="LiveChat"
+                        title="LiveChat"
+                        className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:text-red-accent-400"
+                      >
+                        LiveChat
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/"
+                        aria-label="LiveChat"
+                        title="LiveChat"
+                        className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:text-red-accent-400"
+                      >
+                        ConversationStarter
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/"
+                        aria-label="LiveChat"
+                        title="LiveChat"
+                        className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:text-red-accent-400"
+                      >
+                        SocialWall
                       </a>
                     </li>
                   </ul>
@@ -121,6 +111,24 @@ export default function Nav() {
             </div>
           )}
         </div>
+        <div className="text-left text-xl lg:text-center lg:text-3xl font-bold hover:text-red-accent-400">
+          <a href="/" aria-label="Viafoura" title="Viafoura">
+            <img
+              className="mx-auto"
+              width="176"
+              height="35"
+              src="/static/images/white-logo.svg"
+              alt="Viafoura"
+            />
+          </a>
+        </div>
+        <ul className="text-white ml-auto space-x-8 lg:flex">
+          <li>
+            <div className="viafoura">
+              <vf-tray-trigger></vf-tray-trigger>
+            </div>
+          </li>
+        </ul>
       </div>
     </nav>
   );
