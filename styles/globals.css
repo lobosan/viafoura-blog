@@ -4,12 +4,10 @@
 
 .viafoura {
   background-color: transparent !important;
-  color: white !important;
 }
-.viafoura .vf-expanding-hover-light::before {
+.vf-expanding-hover-light::before {
   border-width: 0 0 3px 0 !important;
 }
-
 .vf-tray-trigger {
   color: white !important;
 }
