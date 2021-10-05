@@ -44,7 +44,7 @@ export async function getStaticProps({ params, preview = false }) {
                   }
                 }
               }
-              ...on RawHtmlRecord {
+              ...on ContentRecirculationRecord {
                 id
                 contentRecirculation
               }

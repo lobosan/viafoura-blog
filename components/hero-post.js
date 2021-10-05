@@ -14,16 +14,16 @@ export default function HeroPost({
 }) {
   return (
     <section>
-      <div className="my-8 md:mb-16">
+      <div className="my-8">
         <CoverImage
           title={title}
           responsiveImage={coverImage.responsiveImage}
           slug={slug}
         />
       </div>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
+      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-20">
         <div>
-          <h3 className="text-3xl lg:text-5xl font-semibold mb-4 leading-tight">
+          <h3 className="text-3xl md:text-5xl font-semibold mb-4 leading-tight">
             <Link as={`/posts/${slug}`} href="/posts/[slug]">
               <a className="hover:underline">{title}</a>
             </Link>

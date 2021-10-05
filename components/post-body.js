@@ -9,7 +9,7 @@ export default function PostBody({ content }) {
           if (record.__typename === "ImageBlockRecord") {
             return <Image data={record.image.responsiveImage} />;
           }
-          if (record.__typename === "RawHtmlRecord") {
+          if (record.__typename === "ContentRecirculationRecord") {
             return (
               <div
                 dangerouslySetInnerHTML={{
