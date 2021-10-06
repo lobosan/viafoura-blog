@@ -4,13 +4,13 @@ export default function Alert({ preview }) {
   return (
     <div>
       <Container>
-        <div className="py-2 text-center text-sm">
+        <div className="text-center text-sm mt-1">
           {preview ? (
             <>
               Preview Mode{" "}
               <a
                 href="/api/exit-preview"
-                className="underline hover:text-cyan duration-200 transition-colors"
+                className="underline hover:text-sky-500 duration-200 transition-colors"
               >
                 Off
               </a>
@@ -20,7 +20,7 @@ export default function Alert({ preview }) {
               Preview Mode{" "}
               <a
                 href="/api/preview"
-                className="underline hover:text-cyan duration-200 transition-colors"
+                className="underline hover:text-sky-500 duration-200 transition-colors"
               >
                 On
               </a>

@@ -6,8 +6,8 @@ export default function Footer(preview) {
   return (
     <footer className="bg-gray-50 mt-14 border-t border-accent-2">
       <Container>
-        <div className="py-6 text-center">
-          <h3>Viafoura - Copyright © 2021</h3>
+        <div className="text-sm text-center py-6">
+          <div>Viafoura - Copyright © 2021</div>
           <Alert preview={preview} />
         </div>
       </Container>

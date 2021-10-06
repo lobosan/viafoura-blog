@@ -1,14 +1,21 @@
-export default function Avatar({ name, picture, postId }) {
+import Date from "../components/date";
+
+export default function Avatar({ name, picture, date, postId }) {
   return (
-    <div className="flex items-center">
+    <div className="h-16 flex">
       <img
-        src={picture.url}
         className="w-12 h-12 rounded-full mr-4"
+        src={picture.url}
         alt={name}
       />
-      <div className="text-xl font-bold">
-        {name} | <vf-conversations-count vf-container-id={postId}></vf-conversations-count> comments
+      <div className="w-52 flex flex-wrap text-gray-800 text-base">
+        <div className=" font-semibold">
+          {name} | <vf-conversations-count vf-container-id={postId} /> comments
+        </div>
+        <div className="mb-4">
+          <Date dateString={date} />
+        </div>
       </div>
     </div>
-  )
+  );
 }
