@@ -18,6 +18,24 @@ export default function PostBody({ content }) {
               />
             );
           }
+          if (record.__typename === "LiveCommentRecord") {
+            return (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: record.liveComment,
+                }}
+              />
+            );
+          }
+          if (record.__typename === "LiveChatRecord") {
+            return (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: record.liveChat,
+                }}
+              />
+            );
+          }
 
           return (
             <>

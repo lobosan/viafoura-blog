@@ -48,6 +48,14 @@ export async function getStaticProps({ params, preview = false }) {
                 id
                 contentRecirculation
               }
+              ... on LiveCommentRecord {
+                id
+                liveComment
+              }
+              ...on LiveChatRecord {
+                id
+                liveChat
+              }
             }
           }
           date
@@ -117,9 +125,6 @@ export default function Post({ subscription, preview }) {
           <PostBody content={post.content} />
         </article>
         <div className="mt-10"></div>
-        <div className="viafoura">
-          <vf-conversations></vf-conversations>
-        </div>
       </Container>
     </Layout>
   );
