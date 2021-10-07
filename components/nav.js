@@ -67,7 +67,7 @@ export default function Nav() {
                     </li>
                     <li>
                       <a
-                        href="/"
+                        href="/posts/spicy-jalapeno-bacon"
                         aria-label="LiveStories"
                         title="LiveStories"
                         className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:text-red-700"

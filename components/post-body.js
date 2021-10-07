@@ -36,6 +36,15 @@ export default function PostBody({ content }) {
               />
             );
           }
+          if (record.__typename === "LiveStoryRecord") {
+            return (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: record.liveStory,
+                }}
+              />
+            );
+          }
 
           return (
             <>

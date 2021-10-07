@@ -56,6 +56,10 @@ export async function getStaticProps({ params, preview = false }) {
                 id
                 liveChat
               }
+              ...on LiveStoryRecord {
+                id
+                liveStory
+              }
             }
           }
           date
@@ -124,7 +128,6 @@ export default function Post({ subscription, preview }) {
           />
           <PostBody content={post.content} />
         </article>
-        <div className="mt-10"></div>
       </Container>
     </Layout>
   );
