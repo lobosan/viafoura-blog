@@ -1,23 +1,44 @@
-import Nav from "../components/nav";
-import Main from "../components/main";
 import Footer from "../components/footer";
+import Main from "../components/main";
+import Nav from "../components/nav";
 import { useEffect } from "react";
 
 export default function Layout({ preview, children }) {
   useEffect(() => {
-    if (window.vf) {
-      delete window.vf;
+    const script = document.createElement("script");
+    script.src = "https://cdn.viafoura.net/vf-v2.js";
+    script.async = true;
+    document.body.appendChild(script);
+    script.addEventListener("load", () => {
+      console.log("loaded");
+      console.log("window.vfLoaded", window.vfLoaded);
+      console.log(
+        "Viafoura Script Counter",
+        document.querySelectorAll(
+          'script[src="https://cdn.viafoura.net/vf-v2.js"]'
+        ).length
+      );
+      window.vfQ.push(function () {
+        window.vf.context.reset();
+      });
+    });
+
+    return () => {
+      console.log("unmounted");
       window.vfLoaded = false;
+      console.log("window.vfLoaded", window.vfLoaded);
       document
-        .querySelector('script[src="//cdn.viafoura.net/vf-v2.js"]')
+        .querySelector('script[src="https://cdn.viafoura.net/vf-v2.js"]')
         .remove();
-    }
-    const vfjs = document.createElement("script");
-    vfjs.setAttribute("type", "text/javascript");
-    vfjs.setAttribute("async", true);
-    vfjs.setAttribute("src", "//cdn.viafoura.net/vf-v2.js");
-    document.getElementsByTagName("script")[0].insertBefore(vfjs, null);
+      console.log(
+        "Viafoura Script Counter",
+        document.querySelectorAll(
+          'script[src="https://cdn.viafoura.net/vf-v2.js"]'
+        ).length
+      );
+    };
   }, []);
+
   return (
     <>
       <Nav />

@@ -22,11 +22,24 @@
 .vf-expanding-hover-light::before {
   border-width: 0 0 3px 0 !important;
 }
-.vf-tray-trigger {
+nav .vf-tray-trigger {
   color: white !important;
 }
 .vf-account-nav-illustration {
   text-align: center !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+.vf-flex-nav::before,
+.vf-thread__reply-list-item::before,
+.vf3-conversations-list--comments--list::before {
+  display: none;
+}
+.vf3-conversations-list--comments--list {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.prose ol ul {
+  padding: 0;
+  margin: 0;
 }

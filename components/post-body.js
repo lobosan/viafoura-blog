@@ -1,4 +1,4 @@
-import { StructuredText, Image } from "react-datocms";
+import { Image, StructuredText } from "react-datocms";
 
 export default function PostBody({ content }) {
   return (

@@ -117,18 +117,14 @@ export default function Nav() {
               className="mx-auto"
               width="176"
               height="35"
-              src="/static/images/white-logo.svg"
+              src="/images/white-logo.svg"
               alt="Viafoura"
             />
           </a>
         </div>
-        <ul className="text-white ml-auto space-x-8 lg:flex">
-          <li>
-            <div className="viafoura">
-              <vf-tray-trigger></vf-tray-trigger>
-            </div>
-          </li>
-        </ul>
+        <div className="viafoura flex justify-end">
+          <vf-tray-trigger />
+        </div>
       </div>
     </nav>
   );

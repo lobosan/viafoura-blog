@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Head, Html, Main, NextScript } from "next/document";
 
 export default class MyDocument extends Document {
   render() {
@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
           <meta name="vf:domain" content="viafoura-blog.vercel.app" />
           <link
             rel="shortcut icon"
-            href="/static/images/favicon.ico"
+            href="/images/favicon.ico"
             type="image/x-icon"
           />
         </Head>
