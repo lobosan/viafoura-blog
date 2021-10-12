@@ -5,7 +5,7 @@ export default function Nav() {
 
   return (
     <nav className="sticky top-0 h-16 z-40 px-4 py-3 max-w-full bg-red-700">
-      <div className="relative grid items-center grid-cols-3">
+      <div className="grid grid-cols-3 items-center">
         <div className="text-left">
           <button
             aria-label="Open Menu"
@@ -29,7 +29,7 @@ export default function Nav() {
             </svg>
           </button>
           {isMenuOpen && (
-            <div className="absolute top-0 left-0 w-72">
+            <div className="absolute top-3 left-3 w-72">
               <div className="p-5 bg-white border rounded shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-xl font-bold hover:text-red-700">
@@ -114,9 +114,7 @@ export default function Nav() {
         <div className="text-left text-xl lg:text-center lg:text-3xl font-bold hover:text-red-700">
           <a href="/" aria-label="Viafoura" title="Viafoura">
             <img
-              className="mx-auto"
-              width="176"
-              height="35"
+              className="mx-auto w-auto max-h-9"
               src="/images/white-logo.svg"
               alt="Viafoura"
             />

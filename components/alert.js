@@ -1,6 +1,6 @@
 export default function Alert({ preview }) {
   return (
-    <div className="text-center mt-1">
+    <div className="text-center mb-1">
       {preview ? (
         <>
           Preview Mode{" "}

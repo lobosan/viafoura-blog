@@ -2,9 +2,9 @@ import Alert from "../components/alert";
 
 export default function Footer(preview) {
   return (
-    <footer className="text-gray-400 text-sm text-center py-6 bg-gray-50 mt-14 border-t border-gray-300">
+    <footer className="text-gray-400 text-sm text-center py-7 bg-gray-50 mt-14 border-t border-gray-300">
       <Alert preview={preview} />
-      <span className="mt-3">Viafoura - Copyright © 2021</span>
+      <div>Viafoura - Copyright © 2021</div>
     </footer>
   );
 }
