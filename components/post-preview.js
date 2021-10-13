@@ -13,13 +13,11 @@ export default function PostPreview({
 }) {
   return (
     <div>
-      <div className="mb-5">
-        <CoverImage
-          slug={slug}
-          title={title}
-          responsiveImage={coverImage.responsiveImage}
-        />
-      </div>
+      <CoverImage
+        slug={slug}
+        title={title}
+        responsiveImage={coverImage.responsiveImage}
+      />
       <h3 className="mb-3">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
           <a className="hover:underline">{title}</a>

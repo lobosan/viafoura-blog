@@ -82,16 +82,16 @@ export default function Nav() {
                     <a
                       className="block font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
                       href="/"
-                      aria-label="LiveChat"
-                      title="LiveChat"
+                      aria-label="ConversationStarter"
+                      title="ConversationStarter"
                     >
                       ConversationStarter
                     </a>
                     <a
                       className="block font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
                       href="/"
-                      aria-label="LiveChat"
-                      title="LiveChat"
+                      aria-label="SocialWall"
+                      title="SocialWall"
                     >
                       SocialWall
                     </a>

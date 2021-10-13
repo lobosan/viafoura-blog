@@ -1,6 +1,5 @@
 import { Image } from "react-datocms";
 import Link from "next/link";
-import classNames from "classnames";
 
 export default function CoverImage({ title, responsiveImage, slug }) {
   const image = (
@@ -9,9 +8,7 @@ export default function CoverImage({ title, responsiveImage, slug }) {
         ...responsiveImage,
         alt: `Cover Image for ${title}`,
       }}
-      className={classNames("shadow-md", {
-        "hover:shadow-lg transition-shadow duration-200": slug,
-      })}
+      className="mb-7 shadow-lg"
     />
   );
   return (

@@ -1,11 +1,12 @@
-import Head from "next/head";
+import { metaTagsFragment, responsiveImageFragment } from "../../lib/fragments";
+import { renderMetaTags, useQuerySubscription } from "react-datocms";
+
 import Container from "../../components/container";
+import Head from "next/head";
 import Layout from "../../components/layout";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
-import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import { request } from "../../lib/datocms";
-import { metaTagsFragment, responsiveImageFragment } from "../../lib/fragments";
 
 export async function getStaticPaths() {
   const data = await request({ query: `{ allPosts { slug } }` });
@@ -125,6 +126,7 @@ export default function Post({ subscription, preview }) {
             coverImage={post.coverImage}
             date={post.date}
             author={post.author}
+            postId={post.id}
           />
           <PostBody content={post.content} />
         </article>

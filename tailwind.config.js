@@ -5,9 +5,6 @@ module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false,
   theme: {
-    fontFamily: {
-      sans: ["Roboto", "Helvetica", "Arial", "sans-serif"],
-    },
     colors: {
       transparent: "transparent",
       currentColor: "currentColor",
@@ -16,7 +13,30 @@ module.exports = {
       gray: colors.gray,
       red: colors.red,
       sky: colors.sky,
-      fuchsia: colors.fuchsia,
+    },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+    },
+    fontFamily: {
+      sans: [
+        "Roboto",
+        "ui-sans-serif",
+        "system-ui",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Helvetica Neue",
+        "Arial",
+        "Noto Sans",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+      ],
     },
   },
   variants: {},

@@ -2,7 +2,7 @@ import Date from "../components/date";
 
 export default function Avatar({ name, picture, date, postId }) {
   return (
-    <div className="h-16 flex">
+    <div className="flex h-16 mb-8">
       <img
         className="w-12 h-12 rounded-full mr-4"
         src={picture.url}
