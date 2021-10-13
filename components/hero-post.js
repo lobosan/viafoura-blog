@@ -20,7 +20,7 @@ export default function HeroPost({
           slug={slug}
         />
       </div>
-      <div className="grid sm:grid-cols-2 gap-x-16 mb-8">
+      <div className="grid sm:grid-cols-2 gap-x-10 mb-8">
         <h1>
           <Link as={`/posts/${slug}`} href="/posts/[slug]">
             <a className="hover:underline">{title}</a>
