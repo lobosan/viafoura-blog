@@ -29,9 +29,7 @@ export default function HeroPost({
           </h1>
         </div>
         <div>
-          <p className="text-gray-700 antialiased text-base leading-relaxed mb-4">
-            {excerpt}
-          </p>
+          <p className="text-gray-700 antialiased text-base mb-4">{excerpt}</p>
           <Avatar
             name={author.name}
             picture={author.picture}

@@ -9,8 +9,8 @@ export default function CoverImage({ title, responsiveImage, slug }) {
         ...responsiveImage,
         alt: `Cover Image for ${title}`,
       }}
-      className={classNames("shadow-small", {
-        "hover:shadow-medium transition-shadow duration-200": slug,
+      className={classNames("shadow-md", {
+        "hover:shadow-lg transition-shadow duration-200": slug,
       })}
     />
   );

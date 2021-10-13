@@ -4,7 +4,7 @@ export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 h-16 z-40 px-4 py-3 max-w-full bg-red-700">
+    <nav className="sticky top-0 z-40 max-w-full h-16 px-4 py-3 bg-red-700">
       <div className="grid grid-cols-3 items-center">
         <div className="text-left">
           <button
@@ -30,9 +30,9 @@ export default function Nav() {
           </button>
           {isMenuOpen && (
             <div className="absolute top-3 left-3 w-72">
-              <div className="p-5 bg-white border rounded shadow-sm">
+              <div className="px-4 py-3 bg-white border rounded shadow-sm">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-xl font-bold hover:text-red-700">
+                  <div className="text-xl ml-2 font-bold hover:text-red-700">
                     <a href="/" aria-label="Viafoura" title="Viafoura">
                       Viafoura
                     </a>
@@ -41,7 +41,7 @@ export default function Nav() {
                     <button
                       aria-label="Close Menu"
                       title="Close Menu"
-                      className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200"
+                      className="p-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <svg className="w-5 text-gray-800" viewBox="0 0 24 24">
@@ -54,73 +54,63 @@ export default function Nav() {
                   </div>
                 </div>
                 <nav>
-                  <ul className="space-y-4">
-                    <li>
-                      <a
-                        href="/posts/mistakes-tourists-make-on-their-first-trip-abroad"
-                        aria-label="LiveComments"
-                        title="LiveComments"
-                        className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:text-red-700"
-                      >
-                        LiveComments
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/posts/spicy-jalapeno-bacon"
-                        aria-label="LiveStories"
-                        title="LiveStories"
-                        className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:text-red-700"
-                      >
-                        LiveStories
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/posts/unforgettable-trip-to-the-great-wall-in-china"
-                        aria-label="LiveChat"
-                        title="LiveChat"
-                        className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:text-red-700"
-                      >
-                        LiveChat
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="LiveChat"
-                        title="LiveChat"
-                        className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:text-red-700"
-                      >
-                        ConversationStarter
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="LiveChat"
-                        title="LiveChat"
-                        className="font-medium tracking-wide text-gray-800 transition-colors duration-200 hover:text-red-700"
-                      >
-                        SocialWall
-                      </a>
-                    </li>
-                  </ul>
+                  <div>
+                    <a
+                      className="block font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
+                      href="/posts/mistakes-tourists-make-on-their-first-trip-abroad"
+                      aria-label="LiveComments"
+                      title="LiveComments"
+                    >
+                      LiveComments
+                    </a>
+                    <a
+                      className="block font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
+                      href="/posts/spicy-jalapeno-bacon"
+                      aria-label="LiveStories"
+                      title="LiveStories"
+                    >
+                      LiveStories
+                    </a>
+                    <a
+                      className="block font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
+                      href="/posts/unforgettable-trip-to-the-great-wall-in-china"
+                      aria-label="LiveChat"
+                      title="LiveChat"
+                    >
+                      LiveChat
+                    </a>
+                    <a
+                      className="block font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
+                      href="/"
+                      aria-label="LiveChat"
+                      title="LiveChat"
+                    >
+                      ConversationStarter
+                    </a>
+                    <a
+                      className="block font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
+                      href="/"
+                      aria-label="LiveChat"
+                      title="LiveChat"
+                    >
+                      SocialWall
+                    </a>
+                  </div>
                 </nav>
               </div>
             </div>
           )}
         </div>
-        <div className="text-left text-xl lg:text-center lg:text-3xl font-bold hover:text-red-700">
+        <div>
           <a href="/" aria-label="Viafoura" title="Viafoura">
             <img
-              className="mx-auto w-auto max-h-9"
+              className="mx-auto h-8"
               src="/images/white-logo.svg"
               alt="Viafoura"
             />
           </a>
         </div>
-        <div className="viafoura flex justify-end">
+        <div className="viafoura h-10 flex justify-end">
           <vf-tray-trigger />
         </div>
       </div>

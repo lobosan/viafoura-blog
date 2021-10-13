@@ -1,23 +1,27 @@
 @tailwind base;
-@layer base {
-  body {
-    @apply font-body;
-  }
-  h1 {
-    @apply text-gray-800 text-4xl font-bold antialiased leading-tight;
-  }
-  h2 {
-    @apply text-gray-800 text-3xl font-bold leading-tight;
-  }
-  h3 {
-    @apply text-gray-800 text-2xl font-semibold leading-tight;
-  }
-}
 @tailwind components;
 @tailwind utilities;
 
-.viafoura {
-  background-color: transparent !important;
+@layer base {
+  body {
+    @apply font-sans;
+  }
+  h1 {
+    @apply text-gray-800 text-4xl font-bold antialiased;
+  }
+  h2 {
+    @apply text-gray-800 text-3xl font-bold;
+  }
+  h3 {
+    @apply text-gray-800 text-2xl font-semibold;
+  }
+}
+
+nav .viafoura,
+nav .vf-tray-trigger:hover,
+nav .vf-tray-trigger:focus {
+  color: white !important;
+  background-color: transparent;
 }
 .vf-expanding-hover-light::before {
   border-width: 0 0 3px 0 !important;
@@ -27,20 +31,12 @@
   margin-left: auto !important;
   margin-right: auto !important;
 }
-nav .vf-tray-trigger {
-  color: white !important;
-}
-.prose .viafoura ul {
-  padding: 0;
-  margin: 0;
-}
-.prose .viafoura ul > li::before {
-  display: none;
-}
+.prose .viafoura ul,
 .prose .viafoura ol > li {
   padding: 0;
   margin: 0;
 }
+.prose .viafoura ul > li::before,
 .prose .viafoura ol > li::before {
   display: none;
 }
