@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Nav() {
@@ -56,40 +58,40 @@ export default function Nav() {
                 <nav>
                   <div>
                     <a
-                      className="block font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
                       href="/posts/mistakes-tourists-make-on-their-first-trip-abroad"
+                      className="block cursor-pointer font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
                       aria-label="LiveComments"
                       title="LiveComments"
                     >
                       LiveComments
                     </a>
                     <a
-                      className="block font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
                       href="/posts/spicy-jalapeno-bacon"
+                      className="block cursor-pointer font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
                       aria-label="LiveStories"
                       title="LiveStories"
                     >
                       LiveStories
                     </a>
                     <a
-                      className="block font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
                       href="/posts/unforgettable-trip-to-the-great-wall-in-china"
+                      className="block cursor-pointer font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
                       aria-label="LiveChat"
                       title="LiveChat"
                     >
                       LiveChat
                     </a>
                     <a
-                      className="block font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
                       href="/"
+                      className="block cursor-pointer font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
                       aria-label="ConversationStarter"
                       title="ConversationStarter"
                     >
                       ConversationStarter
                     </a>
                     <a
-                      className="block font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
                       href="/"
+                      className="block cursor-pointer font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
                       aria-label="SocialWall"
                       title="SocialWall"
                     >
@@ -101,12 +103,13 @@ export default function Nav() {
             </div>
           )}
         </div>
-        <div>
+        <div className="h-8 mx-auto">
           <a href="/" aria-label="Viafoura" title="Viafoura">
-            <img
-              className="mx-auto h-8"
+            <Image
               src="/images/white-logo.svg"
               alt="Viafoura"
+              width={161}
+              height={32}
             />
           </a>
         </div>

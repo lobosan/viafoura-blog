@@ -1,10 +1,9 @@
-export default async (req, res) => {
+export default async function preview(req, res) {
   // Please set the NEXT_EXAMPLE_CMS_DATOCMS_PREVIEW_SECRET env variable
   // on Vercel/Netlify, or everyone will be able to enter Preview Mode and
   // see draft content!
 
-  const secret =
-    process.env.NEXT_EXAMPLE_CMS_DATOCMS_PREVIEW_SECRET;
+  const secret = process.env.NEXT_EXAMPLE_CMS_DATOCMS_PREVIEW_SECRET;
 
   // Check the secret and next parameters
   if (secret && req.query.secret !== secret) {
@@ -17,4 +16,4 @@ export default async (req, res) => {
   // Redirect to the homepage
   res.writeHead(307, { Location: "/" });
   res.end();
-};
+}

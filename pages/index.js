@@ -1,11 +1,12 @@
-import Head from "next/head";
+import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
+import { renderMetaTags, useQuerySubscription } from "react-datocms";
+
 import Container from "../components/container";
+import Head from "next/head";
 import HeroPost from "../components/hero-post";
 import Layout from "../components/layout";
 import MoreStories from "../components/more-stories";
-import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import { request } from "../lib/datocms";
-import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
 
 export async function getStaticProps({ preview }) {
   const graphqlRequest = {
@@ -28,14 +29,14 @@ export async function getStaticProps({ preview }) {
           excerpt
           date
           coverImage {
-            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 856, h: 428 }) {
               ...responsiveImageFragment
             }
           }
           author {
             name
             picture {
-              url(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100, sat: -100})
+              url(imgixParams: {fm: jpg, fit: crop, w: 48, h: 48})
             }
           }
         }

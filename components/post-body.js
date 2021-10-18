@@ -7,7 +7,12 @@ export default function PostBody({ content }) {
         data={content}
         renderBlock={({ record }) => {
           if (record.__typename === "ImageBlockRecord") {
-            return <Image data={record.image.responsiveImage} />;
+            return (
+              // eslint-disable-next-line jsx-a11y/alt-text
+              <Image
+                data={{ ...record.image.responsiveImage, alt: "Content Image" }}
+              />
+            );
           }
           if (record.__typename === "ContentRecirculationRecord") {
             return (
@@ -48,7 +53,7 @@ export default function PostBody({ content }) {
 
           return (
             <>
-              <p>Don't know how to render a block!</p>
+              <p>Don&apos;t know how to render a block!</p>
               <pre>{JSON.stringify(record, null, 2)}</pre>
             </>
           );

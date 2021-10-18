@@ -10,31 +10,23 @@ export default function Layout({ preview, children }) {
     script.async = true;
     document.body.appendChild(script);
     script.addEventListener("load", () => {
-      console.log("loaded");
-      console.log("window.vfLoaded", window.vfLoaded);
       console.log(
-        "Viafoura Script Counter",
+        "1. LOADED:",
         document.querySelectorAll(
           'script[src="https://cdn.viafoura.net/vf-v2.js"]'
         ).length
       );
-      window.vfQ.push(function () {
-        window.vf.context.reset();
-      });
     });
 
-    return () => {
-      console.log("unmounted");
+    return function cleanup() {
       window.vfLoaded = false;
-      console.log("window.vfLoaded", window.vfLoaded);
       document
         .querySelector('script[src="https://cdn.viafoura.net/vf-v2.js"]')
         .remove();
       console.log(
-        "Viafoura Script Counter",
-        document.querySelectorAll(
-          'script[src="https://cdn.viafoura.net/vf-v2.js"]'
-        ).length
+        "2. UNMOUNT:",
+        document.querySelectorAll('script[src="//cdn.viafoura.net/vf-v2.js"]')
+          .length
       );
     };
   }, []);
@@ -42,7 +34,7 @@ export default function Layout({ preview, children }) {
   return (
     <>
       <Nav />
-      <Main children={children} />
+      <Main>{children}</Main>
       <Footer preview={preview} />
     </>
   );
