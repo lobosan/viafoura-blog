@@ -1,6 +1,5 @@
 import Avatar from "../components/avatar";
 import CoverImage from "../components/cover-image";
-import Link from "next/link";
 
 export default function HeroPost({
   id,
@@ -22,9 +21,9 @@ export default function HeroPost({
       </div>
       <div className="grid sm:grid-cols-2 gap-x-10 mb-8">
         <h1>
-          <Link as={`/posts/${slug}`} href="/posts/[slug]">
-            <a className="hover:underline">{title}</a>
-          </Link>
+          <a href={`/posts/${slug}`} className="hover:underline">
+            {title}
+          </a>
         </h1>
         <div>
           <p className="text-gray-700 antialiased text-base mt-4 sm:mt-0 mb-4">

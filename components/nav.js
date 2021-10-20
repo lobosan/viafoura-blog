@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Nav() {
@@ -105,11 +105,10 @@ export default function Nav() {
         </div>
         <div className="h-8 mx-auto">
           <a href="/" aria-label="Viafoura" title="Viafoura">
-            <Image
+            <img
+              className="w-40 h-8"
               src="/images/white-logo.svg"
               alt="Viafoura"
-              width={161}
-              height={32}
             />
           </a>
         </div>

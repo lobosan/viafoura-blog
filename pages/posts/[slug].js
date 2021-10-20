@@ -3,7 +3,6 @@ import { renderMetaTags, useQuerySubscription } from "react-datocms";
 
 import Container from "../../components/container";
 import Head from "next/head";
-import Layout from "../../components/layout";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
 import { request } from "../../lib/datocms";
@@ -114,7 +113,7 @@ export default function Post({ subscription, preview }) {
   const metaTags = post.seo.concat(site.favicon);
 
   return (
-    <Layout preview={preview}>
+    <>
       <Head>
         {renderMetaTags(metaTags)}
         <meta name="vf:container_id" content={post.id} />
@@ -131,6 +130,6 @@ export default function Post({ subscription, preview }) {
           <PostBody content={post.content} />
         </article>
       </Container>
-    </Layout>
+    </>
   );
 }

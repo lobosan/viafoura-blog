@@ -4,7 +4,6 @@ import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import Container from "../components/container";
 import Head from "next/head";
 import HeroPost from "../components/hero-post";
-import Layout from "../components/layout";
 import MoreStories from "../components/more-stories";
 import { request } from "../lib/datocms";
 
@@ -76,23 +75,21 @@ export default function Index({ subscription }) {
 
   return (
     <>
-      <Layout preview={subscription.preview}>
-        <Head>{renderMetaTags(metaTags)}</Head>
-        <Container>
-          {heroPost && (
-            <HeroPost
-              id={heroPost.id}
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
+      <Head>{renderMetaTags(metaTags)}</Head>
+      <Container>
+        {heroPost && (
+          <HeroPost
+            id={heroPost.id}
+            title={heroPost.title}
+            coverImage={heroPost.coverImage}
+            date={heroPost.date}
+            author={heroPost.author}
+            slug={heroPost.slug}
+            excerpt={heroPost.excerpt}
+          />
+        )}
+        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+      </Container>
     </>
   );
 }

@@ -1,5 +1,4 @@
 import { Image } from "react-datocms";
-import Link from "next/link";
 
 export default function CoverImage({ title, responsiveImage, slug }) {
   const image = (
@@ -15,9 +14,9 @@ export default function CoverImage({ title, responsiveImage, slug }) {
   return (
     <div>
       {slug ? (
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a aria-label={title}>{image}</a>
-        </Link>
+        <a href={`/posts/${slug}`} aria-label={title}>
+          {image}
+        </a>
       ) : (
         image
       )}
