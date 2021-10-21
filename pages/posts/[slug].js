@@ -39,7 +39,7 @@ export async function getStaticProps({ params, preview = false }) {
               ...on ImageBlockRecord {
                 id
                 image {
-                  responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
+                  responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 856, h: 428 }) {
                     ...responsiveImageFragment
                   }
                 }
