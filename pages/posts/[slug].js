@@ -25,6 +25,11 @@ export async function getStaticProps({ params, preview = false }) {
             ...metaTagsFragment
           }
         }
+        allPosts(orderBy: menuName_DESC) {
+          id
+          slug
+          menuName
+        }
         post(filter: {slug: {eq: $slug}}) {
           id
           seo: _seoMetaTags {
@@ -79,7 +84,6 @@ export async function getStaticProps({ params, preview = false }) {
           }
         }
       }
-
       ${responsiveImageFragment}
       ${metaTagsFragment}
     `,

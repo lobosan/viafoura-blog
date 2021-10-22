@@ -21,10 +21,11 @@ export async function getStaticProps({ preview }) {
             ...metaTagsFragment
           }
         }
-        allPosts(orderBy: date_DESC, first: 20) {
+        allPosts(orderBy: menuName_DESC) {
           id
-          title
           slug
+          menuName
+          title
           excerpt
           date
           coverImage {

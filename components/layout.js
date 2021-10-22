@@ -5,7 +5,7 @@ import Nav from "../components/nav";
 export default function Layout({ preview, children }) {
   return (
     <>
-      <Nav />
+      <Nav preview={preview} />
       <Main>{children}</Main>
       <Footer preview={preview} />
     </>

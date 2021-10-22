@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { useState } from "react";
 
-export default function Nav() {
+export default function Nav({ preview }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -56,48 +56,18 @@ export default function Nav() {
                   </div>
                 </div>
                 <nav>
-                  <div>
-                    <a
-                      href="/posts/mistakes-tourists-make-on-their-first-trip-abroad"
-                      className="block cursor-pointer font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
-                      aria-label="LiveComments"
-                      title="LiveComments"
-                    >
-                      LiveComments
-                    </a>
-                    <a
-                      href="/posts/spicy-jalapeno-bacon"
-                      className="block cursor-pointer font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
-                      aria-label="LiveStories"
-                      title="LiveStories"
-                    >
-                      LiveStories
-                    </a>
-                    <a
-                      href="/posts/unforgettable-trip-to-the-great-wall-in-china"
-                      className="block cursor-pointer font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
-                      aria-label="LiveChat"
-                      title="LiveChat"
-                    >
-                      LiveChat
-                    </a>
-                    <a
-                      href="/"
-                      className="block cursor-pointer font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
-                      aria-label="ConversationStarter"
-                      title="ConversationStarter"
-                    >
-                      ConversationStarter
-                    </a>
-                    <a
-                      href="/"
-                      className="block cursor-pointer font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
-                      aria-label="SocialWall"
-                      title="SocialWall"
-                    >
-                      SocialWall
-                    </a>
-                  </div>
+                  {preview.initialData &&
+                    preview.initialData.allPosts.map((post) => (
+                      <a
+                        key={post.id}
+                        href={`/posts/${post.slug}`}
+                        title={post.menuName}
+                        className="block cursor-pointer font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
+                        aria-label="LiveComments"
+                      >
+                        {post.menuName}
+                      </a>
+                    ))}
                 </nav>
               </div>
             </div>
