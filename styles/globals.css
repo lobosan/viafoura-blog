@@ -43,3 +43,7 @@ nav .viafoura .vf-tray-trigger:focus {
 .prose .viafoura ol > li::before {
   display: none;
 }
+
+.prose .viafoura img {
+  margin: 0;
+}
