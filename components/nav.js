@@ -62,8 +62,8 @@ export default function Nav({ preview }) {
                         key={post.id}
                         href={`/posts/${post.slug}`}
                         title={post.menuName}
+                        aria-label={post.menuName}
                         className="block cursor-pointer font-medium px-3 py-2 rounded tracking-wide text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-red-700"
-                        aria-label="LiveComments"
                       >
                         {post.menuName}
                       </a>
