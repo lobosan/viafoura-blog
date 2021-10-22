@@ -7,8 +7,8 @@ export default function Nav({ preview }) {
 
   return (
     <nav className="sticky top-0 z-40 max-w-full h-16 px-4 py-3 bg-red-700">
-      <div className="grid grid-cols-3 items-center">
-        <div className="text-left">
+      <div className="grid grid-cols-6 items-center">
+        <div className="col-span-1 text-left">
           <button
             aria-label="Open Menu"
             title="Open Menu"
@@ -73,16 +73,12 @@ export default function Nav({ preview }) {
             </div>
           )}
         </div>
-        <div className="h-8 mx-auto">
-          <a href="/" aria-label="Viafoura" title="Viafoura">
-            <img
-              className="w-40 h-8"
-              src="/images/white-logo.svg"
-              alt="Viafoura"
-            />
+        <div className="col-span-4 h-8 w-40 mx-auto">
+          <a href="/" title="Viafoura" aria-label="Viafoura">
+            <img src="/images/white-logo.svg" alt="Viafoura" />
           </a>
         </div>
-        <div className="viafoura h-10 flex justify-end">
+        <div className="viafoura col-span-1 h-10 flex justify-end">
           <vf-tray-trigger />
         </div>
       </div>

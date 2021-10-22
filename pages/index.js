@@ -41,7 +41,6 @@ export async function getStaticProps({ preview }) {
           }
         }
       }
-
       ${metaTagsFragment}
       ${responsiveImageFragment}
     `,
