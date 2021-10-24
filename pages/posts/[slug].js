@@ -5,10 +5,10 @@ import Container from "../../components/container";
 import Head from "next/head";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
-import { request } from "../../lib/datocms";
+import { fetchGraphQL } from "../../lib/fetchGraphQL";
 
 export async function getStaticPaths() {
-  const data = await request({ query: `{ allPosts { slug } }` });
+  const data = await fetchGraphQL({ query: `{ allPosts { slug } }` });
 
   return {
     paths: data.allPosts.map((post) => `/posts/${post.slug}`),
@@ -98,12 +98,12 @@ export async function getStaticProps({ params, preview = false }) {
       subscription: preview
         ? {
             ...graphqlRequest,
-            initialData: await request(graphqlRequest),
-            token: process.env.DATOCMS_API_TOKEN,
+            initialData: await fetchGraphQL(graphqlRequest),
+            token: process.env.GRAPHQL_API_TOKEN,
           }
         : {
             enabled: false,
-            initialData: await request(graphqlRequest),
+            initialData: await fetchGraphQL(graphqlRequest),
           },
     },
   };

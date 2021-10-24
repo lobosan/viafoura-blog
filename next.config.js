@@ -2,7 +2,7 @@ require("dotenv").config();
 
 module.exports = {
   env: {
-    DATOCMS_API_TOKEN: process.env.DATOCMS_API_TOKEN,
+    GRAPHQL_API_TOKEN: process.env.GRAPHQL_API_TOKEN,
   },
   images: {
     domains: ["www.datocms-assets.com"],

@@ -5,7 +5,7 @@ import Container from "../components/container";
 import Head from "next/head";
 import HeroPost from "../components/hero-post";
 import MoreStories from "../components/more-stories";
-import { request } from "../lib/datocms";
+import { fetchGraphQL } from "../lib/fetchGraphQL";
 
 export async function getStaticProps({ preview }) {
   const graphqlRequest = {
@@ -52,13 +52,13 @@ export async function getStaticProps({ preview }) {
       subscription: preview
         ? {
             ...graphqlRequest,
-            initialData: await request(graphqlRequest),
-            token: process.env.DATOCMS_API_TOKEN,
-            environment: process.env.NEXT_DATOCMS_ENVIRONMENT || null,
+            initialData: await fetchGraphQL(graphqlRequest),
+            token: process.env.GRAPHQL_API_TOKEN,
+            environment: process.env.BACKEND_ENVIRONMENT || null,
           }
         : {
             enabled: false,
-            initialData: await request(graphqlRequest),
+            initialData: await fetchGraphQL(graphqlRequest),
           },
     },
   };

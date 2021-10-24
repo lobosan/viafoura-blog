@@ -1,5 +1,5 @@
 export default async function preview(req, res) {
-  const secret = process.env.DATOCMS_API_TOKEN;
+  const secret = process.env.GRAPHQL_API_TOKEN;
 
   // Check the secret and next parameters
   if (secret && req.query.secret !== secret) {
