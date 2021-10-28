@@ -9,21 +9,19 @@
   },
   "dependencies": {
     "date-fns": "2.25.0",
-    "next": "^11.1.2",
+    "next": "^12.0.1",
     "react": "^17.0.2",
-    "react-datocms": "^1.6.3",
+    "react-datocms": "^1.6.6",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^4.0.3",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.7",
     "dotenv": "10.0.0",
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
+    "eslint-config-next": "12.0.1",
     "eslint-config-prettier": "^8.3.0",
-    "postcss": "^8.3.9",
-    "postcss-preset-env": "^6.7.0",
+    "postcss": "^8.3.11",
     "prettier": "^2.4.1",
     "tailwindcss": "^2.2.17"
   }
