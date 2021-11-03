@@ -76,7 +76,8 @@ export default function Nav({ preview }) {
         <div className="col-span-4 mx-auto">
           <a href="/" title="Viafoura" aria-label="Viafoura">
             <img
-              className="w-40 h-8"
+              width="160"
+              height="32"
               src="/images/white-logo.svg"
               alt="Viafoura"
             />
