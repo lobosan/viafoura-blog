@@ -73,9 +73,13 @@ export default function Nav({ preview }) {
             </div>
           )}
         </div>
-        <div className="col-span-4 h-8 w-40 mx-auto">
+        <div className="col-span-4 mx-auto">
           <a href="/" title="Viafoura" aria-label="Viafoura">
-            <img src="/images/white-logo.svg" alt="Viafoura" />
+            <img
+              className="w-40 h-8"
+              src="/images/white-logo.svg"
+              alt="Viafoura"
+            />
           </a>
         </div>
         <div className="viafoura col-span-1 h-10 flex justify-end">
