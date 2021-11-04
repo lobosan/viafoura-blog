@@ -1,49 +1,15 @@
-import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
 
-import Container from "../components/container";
+import Container from "@/components/container";
 import Head from "next/head";
-import HeroPost from "../components/hero-post";
-import MoreStories from "../components/more-stories";
-import { fetchGraphQL } from "../lib/fetchGraphQL";
+import HeroPost from "@/components/hero-post";
+import MoreStories from "@/components/more-stories";
+import { fetchGraphQL } from "@/graphql/fetchGraphQL";
+import { indexPosts } from "@/graphql/indexPosts";
 
 export async function getStaticProps({ preview }) {
   const graphqlRequest = {
-    query: `
-      {
-        site: _site {
-          favicon: faviconMetaTags {
-            ...metaTagsFragment
-          }
-        }
-        blog {
-          seo: _seoMetaTags {
-            ...metaTagsFragment
-          }
-        }
-        allPosts(orderBy: menuName_DESC) {
-          id
-          slug
-          menuName
-          title
-          excerpt
-          date
-          coverImage {
-            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 856, h: 428 }) {
-              ...responsiveImageFragment
-            }
-          }
-          author {
-            name
-            picture {
-              url(imgixParams: {fm: jpg, fit: crop, w: 48, h: 48})
-            }
-          }
-        }
-      }
-      ${metaTagsFragment}
-      ${responsiveImageFragment}
-    `,
+    query: indexPosts,
     preview,
   };
 

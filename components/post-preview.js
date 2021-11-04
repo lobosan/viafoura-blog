@@ -1,5 +1,5 @@
-import Avatar from "../components/avatar";
-import CoverImage from "./cover-image";
+import Avatar from "@/components/avatar";
+import CoverImage from "@/components/cover-image";
 
 export default function PostPreview({
   id,

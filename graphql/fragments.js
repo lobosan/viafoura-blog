@@ -1,5 +1,6 @@
-// See: https://www.datocms.com/blog/offer-responsive-progressive-lqip-images-in-2020
-export const responsiveImageFragment = `
+const gql = String.raw;
+
+export const responsiveImageFragment = gql`
   fragment responsiveImageFragment on ResponsiveImage {
     srcSet
     webpSrcSet
@@ -12,12 +13,12 @@ export const responsiveImageFragment = `
     title
     base64
   }
-`
+`;
 
-export const metaTagsFragment = `
+export const metaTagsFragment = gql`
   fragment metaTagsFragment on Tag {
     attributes
     content
     tag
   }
-`
+`;

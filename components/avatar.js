@@ -1,4 +1,4 @@
-import Date from "../components/date";
+import Date from "@/components/date";
 import Image from "next/image";
 
 export default function Avatar({ name, picture, date, postId }) {

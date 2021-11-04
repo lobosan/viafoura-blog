@@ -1,4 +1,4 @@
-import Alert from "../components/alert";
+import Alert from "@/components/alert";
 
 export default function Footer(preview) {
   return (
