@@ -1,5 +1,6 @@
-import Date from "@/components/date";
 import Image from "next/image";
+
+import Date from "@/components/date";
 
 export default function Avatar({ name, picture, date, postId }) {
   return (
